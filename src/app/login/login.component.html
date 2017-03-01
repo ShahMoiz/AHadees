@@ -1,0 +1,31 @@
+<div class="forms">
+  <h3 class="center">SignUp</h3>
+  <form [formGroup]="formLog" (ngSubmit)="OnSubmit(formLog.value)">
+
+    <md-input-container class="example-half-width">
+      <input mdInput placeholder="First name">
+    </md-input-container>
+
+    <md-input-container class="example-half-width">
+      <input mdInput placeholder="Last name">
+    </md-input-container>
+    <md-input-container class="full-width">
+      <input mdInput placeholder="Email" class="full-width" [formControl]="formLog.controls['email']" >
+    </md-input-container>
+    <md-input-container class="full-widthw">
+      <input mdInput placeholder="Password" [formControl]="formLog.controls['pass']">
+    </md-input-container>
+    <md-input-container class="example-half-width">
+      <input mdInput placeholder="Re-Enter Password">
+    </md-input-container>
+    <md-radio-group>
+      <md-radio-button class="small" value="admin">Admin</md-radio-button>
+      <md-radio-button class="small" value="user">User</md-radio-button>
+    </md-radio-group>
+    <p class="small"><a routerLink="/login">Already SignUp ?</a></p>
+    <button type="Submit" md-raised-button class="full-width">SignUp</button>
+  </form>
+</div>
+
+<h6> {{log}} </h6>
+<!--<h6> {{err}} </h6>-->

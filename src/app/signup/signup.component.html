@@ -1,0 +1,65 @@
+<div class="forms">
+    
+  <h1 class="heading" >SignUp</h1>
+ <form [formGroup]="signForm"
+(ngSubmit)="onSubmit(signForm.value)">
+
+    <md-input-container class="half-width" [ngClass]="{'has-error': !signForm.controls['fName'].valid}">
+      <input mdInput placeholder="First name"  [formControl]="signForm.controls['fName']">
+    </md-input-container>
+    <div class="alert alert-danger" *ngIf="!signForm.controls['fName'].valid && signForm.controls['fName'].touched">You must select a gender.</div>
+
+    <md-input-container class="half-width">
+      <input mdInput placeholder="Last name" [formControl]="signForm.controls['lName']">
+    </md-input-container>
+
+    <md-input-container class="full-width">
+      <input mdInput type="email" placeholder="Email" class="full-width" [formControl]="signForm.controls['email']" >
+    </md-input-container>
+
+    <md-input-container class="half-width">
+      <input mdInput type="password" placeholder="Password" [formControl]="signForm.controls['pass']">
+    </md-input-container>
+
+    <md-input-container class="half-width">
+      <input mdInput type="password" placeholder="Re-Enter Password" [formControl]="signForm.controls['rePass']">
+    </md-input-container>
+
+    <md-radio-group class="full-width" [formControl]="signForm.controls['radio']">
+      <md-radio-button class="small" value="admin">Admin</md-radio-button>
+      <md-radio-button class="small" value="user">User</md-radio-button>
+    </md-radio-group>
+    <p class="small"><a routerLink="/login">Already SignUp ?</a></p>
+    <button type="Submit" [disabled]="!signForm.valid" md-raised-button class="full-width">SignUp</button>
+  </form>
+</div>
+<!--<div style="padding: 0; border: 1px solid var(--bodyColor); background-color: var(--bodyColor);  padding: 0; text-align: center;">
+        <h6>Sell<span class="bodyColor">&</span>buy<span  style="font-size: 12px;" class="bodyColor">کلاسیفایڈ</span></h6>
+    </div>-->
+
+<!--<form [formGroup]="signForm"
+(ngSubmit)="onSubmit(signForm.value)">
+<p>Name:</p>
+<input type="text" [formControl]="signForm.controls['name']">
+<p>Username:</p>
+<input type="text" [formControl]="signForm.controls['user']">
+<p>Password:</p>
+<input type="password" [formControl]="signForm.controls['pass']">
+<button type="submit">SignUp</button>
+</form>-->
+
+<!--<form #f="ngForm"
+(ngSubmit)="onSubmit(f.value)"
+class="ui form">
+<div class="field">
+<label for="skuInput">SKU</label>
+<input type="text" id="skuInput" placeholder="SKU" name="sku" ngModel>
+</div>
+<button type="submit" class="ui button">Submit</button>
+</form>-->
+
+<ul>
+    <li *ngFor="let item of items | async">
+       {{ item | json }}
+    </li>
+  </ul>

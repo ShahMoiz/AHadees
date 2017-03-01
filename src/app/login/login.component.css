@@ -1,0 +1,25 @@
+.forms {
+    width: 400px;
+    margin: 0 auto;
+    /*border: 6px solid black;*/
+    padding: 50px;
+}
+.full-width {
+    width: 100%;
+}
+.small {
+    font-size: 12px;
+}
+.small > a {
+    text-decoration: none;
+    color: black;
+}
+.small > a:hover {
+    text-decoration: underline;
+}
+.center {
+    /*width: 40px;
+    margin: 0 auto;*/
+    text-align: center;
+
+}
