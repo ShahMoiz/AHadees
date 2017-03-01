@@ -25,10 +25,10 @@
       <input mdInput type="password" placeholder="Re-Enter Password" [formControl]="signForm.controls['rePass']">
     </md-input-container>
 
-    <md-radio-group class="full-width" [formControl]="signForm.controls['radio']">
+    <!--<md-radio-group class="full-width" [formControl]="signForm.controls['radio']">
       <md-radio-button class="small" value="admin">Admin</md-radio-button>
       <md-radio-button class="small" value="user">User</md-radio-button>
-    </md-radio-group>
+    </md-radio-group>-->
     <p class="small"><a routerLink="/login">Already SignUp ?</a></p>
     <button type="Submit" [disabled]="!signForm.valid" md-raised-button class="full-width">SignUp</button>
   </form>

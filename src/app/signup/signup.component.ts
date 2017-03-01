@@ -25,7 +25,7 @@ export class SignupComponent implements OnInit {
       'email': ['abdulmoiz19994@gmail.com'],
       'pass': ['78612345'],
       'rePass': ['78612345'],
-      'radio': ['admin']
+      // 'radio': ['admin']
     })
     // firebase.auth()
     // .createUserWithEmailAndPassword(this.signForm.user,this.signForm.pass).then(function(){
