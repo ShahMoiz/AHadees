@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { AppService } from './../app.service';
 
 import * as firebase from 'firebase';
 @Component({
@@ -11,12 +13,19 @@ export class LoginComponent implements OnInit {
   formLog: FormGroup;
   // log = '';
   // err = '';
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private as: AppService) { }
 
   ngOnInit() {
     this.formLog = this.fb.group({
-      'email': 'abdulmoiz19994@gmail.com',
-      'pass': ''
+      'email': ['abdulmoiz19994@gmail.com', Validators.compose([
+        Validators.required
+      ])],
+      'pass': [null, Validators.compose([
+        Validators.required
+      ])],
+      'radio': ['user', Validators.compose([
+        Validators.required
+      ])],
     })
   }
 
@@ -26,7 +35,9 @@ export class LoginComponent implements OnInit {
     }).catch(function(err){
       alert(err)
     })
-    console.log(f)
+    this.as.checkDashBoard(f.radio)
+    console.log(f);
+    console.log(f.radio);
   }
 
 }

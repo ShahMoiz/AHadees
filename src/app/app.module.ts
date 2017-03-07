@@ -10,10 +10,20 @@ import 'hammerjs';
 // import * as firebase from 'firebase'
 // import * as firebase from 'firebase';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
+
+import { AppService } from './app.service';
+
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { routes, routerModule } from './app.routes';
+import { HomeComponent } from './home/home.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { NavComponent } from './nav/nav.component';
 
 // Initialize Firebase
   var config = {
@@ -32,6 +42,13 @@ import { routes, routerModule } from './app.routes';
     AppComponent,
     SignupComponent,
     LoginComponent,
+    HomeComponent,
+    AdminDashboardComponent,
+    UserDashboardComponent,
+    HeaderComponent,
+    HeaderComponent,
+    SidenavComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,10 +57,12 @@ import { routes, routerModule } from './app.routes';
     MaterialModule,
     routerModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(config)
+    AngularFireModule.initializeApp(config),
+    NgbModule.forRoot()
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AppService],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
  
