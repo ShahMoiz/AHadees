@@ -5,7 +5,7 @@
         <div class="card-image">
           <img class="img-responsive" src={{product.img}}>
           <span class="card-title">{{product.title}}</span>
-          <a (click)="addCart(product.title, product.brand, product.price, product.manufacturer,product.id)" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          <a (click)="addCart(product.title, product.brand, product.price, product.manufacturer,product.id, product.img)" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
         </div>
         <div class="card-content">
           <p>{{product.shortDes}}</p>
@@ -19,15 +19,4 @@
     </div>
   </div>
 
-
-<div *ngIf="this.carts.length != null">
- <ol *ngFor="let cart of carts; let i = index">
-  <li>Title: {{cart.title}} </li>
-  <li>Brand: {{cart.brand}} </li>
-  <li>Manufacturer: {{cart.manufacturer}} </li>
-  <li>price: {{cart.price}} </li>
-  <button (click)="dlt(i)">Delete</button>
-</ol>
-
-</div>
 </div>

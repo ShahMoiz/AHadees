@@ -13,6 +13,7 @@ import 'hammerjs';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 
 import { AppService } from './app.service';
+import { CartService } from './shoppingCart.service';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
@@ -26,6 +27,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { NavComponent } from './nav/nav.component';
 import { NoPageComponent } from './404-page/404-page.component';
 import { ContentComponent } from './content/content.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 // Initialize Firebase
   var config = {
@@ -53,6 +55,7 @@ import { ContentComponent } from './content/content.component';
     NavComponent,
     NoPageComponent,
     ContentComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,7 @@ import { ContentComponent } from './content/content.component';
     AngularFireModule.initializeApp(config),
     NgbModule.forRoot()
   ],
-  providers: [AppService],
+  providers: [AppService, CartService],
   bootstrap: [AppComponent],
 
 })
