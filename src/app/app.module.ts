@@ -24,6 +24,8 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { NavComponent } from './nav/nav.component';
+import { NoPageComponent } from './404-page/404-page.component';
+import { ContentComponent } from './content/content.component';
 
 // Initialize Firebase
   var config = {
@@ -49,6 +51,8 @@ import { NavComponent } from './nav/nav.component';
     HeaderComponent,
     SidenavComponent,
     NavComponent,
+    NoPageComponent,
+    ContentComponent,
   ],
   imports: [
     BrowserModule,

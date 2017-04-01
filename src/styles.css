@@ -3,4 +3,9 @@
 :root {
         --styleColor : #0096aa;
         --bodyColor : #323A45;
+        color: white;
         }
+* {
+        /*color: white;*/
+}
+

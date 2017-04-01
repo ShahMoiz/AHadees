@@ -1,0 +1,8 @@
+.slide {
+    margin: 10px;
+    width: 100%;
+}
+.slide h3 {
+    color: black;
+    text-align: center;
+}
