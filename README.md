@@ -1,9 +1,9 @@
-#Shooping Website Version0.1
+# Shooping Website Version0.1
 1) Add Shopping Cart
 2) Add Side Nav
 3) Add Products
 
-#Eorrs
+# Eorrs
 4) Dirty Code
 5) designing Mistakes
 
