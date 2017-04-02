@@ -1,3 +1,13 @@
+#Shooping Website Version0.1
+1) Add Shopping Cart
+2) Add Side Nav
+3) Add Products
+
+#Eorrs
+4) Dirty Code
+5) designing Mistakes
+
+
 # NgProject
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
