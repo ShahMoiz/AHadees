@@ -2,13 +2,6 @@
   <h1 class="heading">Login</h1>
   <form [formGroup]="formLog" (ngSubmit)="OnSubmit(formLog.value)">
 
-    <!--<md-input-container class="example-half-width">
-      <input mdInput placeholder="First name">
-    </md-input-container>
-
-    <md-input-container class="example-half-width">
-      <input mdInput placeholder="Last name">
-    </md-input-container>-->
     <md-input-container class="full-width">
       <input mdInput placeholder="Email" class="full-width" [formControl]="formLog.controls['email']" >
     </md-input-container>
@@ -17,9 +10,6 @@
       <input mdInput type="password" placeholder="Password" [formControl]="formLog.controls['pass']">
     </md-input-container>
 
-    <!--<md-input-container class="example-half-width">
-      <input mdInput placeholder="Re-Enter Password">
-    </md-input-container>-->
     <md-radio-group [formControl]="formLog.controls['radio']">
       <md-radio-button class="small" value="admin">Admin</md-radio-button>
       <md-radio-button class="small" value="user">User</md-radio-button>
@@ -30,5 +20,3 @@
 </div>
 
 <app-home></app-home>
-<!--<h6> {{log}} </h6>-->
-<!--<h6> {{err}} </h6>-->

@@ -11,8 +11,6 @@ import * as firebase from 'firebase';
 })
 export class LoginComponent implements OnInit {
   formLog: FormGroup;
-  // log = '';
-  // err = '';
   constructor(private fb: FormBuilder, private as: AppService) { }
 
   ngOnInit() {

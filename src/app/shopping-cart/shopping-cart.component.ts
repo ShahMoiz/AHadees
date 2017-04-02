@@ -21,8 +21,6 @@ export class ShoppingCartComponent implements OnInit {
   ngOnInit() {
   }
   dlt(index){
-  // alert(index);
   this.scs.carts.splice(index, 1);
-  // console.log(this.scs.carts.splice(index+1, 1));
 }
 }

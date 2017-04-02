@@ -28,6 +28,7 @@ import { NavComponent } from './nav/nav.component';
 import { NoPageComponent } from './404-page/404-page.component';
 import { ContentComponent } from './content/content.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { TowelComponent } from './towel/towel.component';
 
 // Initialize Firebase
   var config = {
@@ -56,6 +57,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     NoPageComponent,
     ContentComponent,
     ShoppingCartComponent,
+    TowelComponent,
   ],
   imports: [
     BrowserModule,
